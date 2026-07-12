@@ -1,8 +1,114 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Cybergeometre</title>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link id="theme" rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">  -->
+<meta charset="UTF-8">
+<!-- l'icone de mon site -->
+<link rel="icon" href="/logos/favicon.ico" />
+
+<style>
+<!--* {
+  box-sizing: border-box;
+}
+-->
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.st-button 
+{
+	border-radius: 0px 30px 30px 0px;
+	width: 200px;
+	margin-top: 8px;
+	text-decoration: none;
+}
+
+.imgencadré {
+                border: 5px solid #003825;
+                border-radius: 15px;
+                padding: 5px;
+                position: center;
+            }
+
+
+
+</style>
+
 </head>
 <body>
-En cours de construction...
+
+
+
+<video autoplay muted loop id="myVideo">
+  Your browser does not support HTML5 video.
+</video>
+
+
+<div class="w3-center">
+<br><br><br>	<img src="./logos/cybergeo-creations-logo.png">
+
+</div>
+
+
+	<div class="w3-bar-block" style="width: 155px; position: fixed; top: 20%;">
+		<a class="w3-bar-item w3-card st-button w3-theme" href="#" >GEOCODAGE</a>
+		<a class="w3-bar-item w3-card st-button w3-theme" href="#" >GEOVISION</a>
+		<a class="w3-bar-item w3-card st-button w3-theme" href="#" >CHANTIERS</a>
+        <br>
+		<a class="w3-bar-item w3-card st-button" style="background-color:rgb(14, 147, 163); color:white;" href="https://r-typons.cybergeometre.com/" target="_blank">R-TYPONS </a>
+		
+
+
+	</div>	
+ 
+
+
+
+
+<div class="w3-container w3-bottom w3-text-white" style="background: rgba(0, 0, 0, 0.4);">
+
+		<p>	© CyberGéometre [_ SITE WEB : EN CONSTRUCTION _] → Contactez-moi :  <a href="mailto:cybergeometre@gmail.com">cybergeometre@gmail.com</a>  </p>  
+</div>
+
+
+<script>
+
+
+function setTheme()
+{
+	var themeColor = "teal";
+	var videoId = getRndInteger(1,3);
+	var videoPath =  "./videos/" + videoId + ".mp4";
+	document.getElementById("myVideo").innerHTML = "<source src=" + videoPath + " type='video/mp4'>";
+	switch(videoId)
+	{
+		case 1: 	themeColor = "green"; 		break;
+		case 2: 	themeColor = "green"; 		break;
+			
+		
+	}
+	document.getElementById("theme").href = "https://www.w3schools.com/lib/w3-theme-"+themeColor+".css";
+} setTheme();
+
+
+function getRndInteger(min, max) { return Math.floor(Math.random() * (max - min)) + min; }
+
+</script>
+
 </body>
 </html>
