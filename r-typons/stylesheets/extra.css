@@ -18,3 +18,19 @@
 .md-header__button.md-logo img {
   height: 1.6rem;
 }
+
+/* --- Accueil : bouton "Ouvrir l'application" + aperçu, centrés --- */
+.md-typeset .hero-cta {
+  text-align: center;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.md-typeset .hero-preview {
+  text-align: center;
+  margin: 1rem 0 2rem;
+}
+
+.md-typeset .hero-preview img {
+  max-width: 100%;
+  border-radius: 10px;
+}
